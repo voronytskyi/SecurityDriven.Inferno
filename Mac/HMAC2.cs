@@ -31,7 +31,7 @@ namespace SecurityDriven.Inferno.Mac
 			hashAlgorithm = hashFactory();
 			base.HashSizeValue = hashAlgorithm.HashSize;
 
-			if (hashAlgorithm is SHA384Cng || hashAlgorithm is SHA512Cng || hashAlgorithm is SHA384 || hashAlgorithm is SHA512)
+			if (hashAlgorithm is SHA384 || hashAlgorithm is SHA512)
 				base.BlockSizeValue = blockSizeValue;
 			else blockSizeValue = 64;
 

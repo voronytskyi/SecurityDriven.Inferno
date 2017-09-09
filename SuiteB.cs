@@ -6,8 +6,8 @@ namespace SecurityDriven.Inferno
 	//https://www.nsa.gov/ia/programs/suiteb_cryptography/ - TOP SECRET MODE only
 	public static class SuiteB
 	{
-		public static readonly Func<SHA384> HashFactory = Hash.HashFactories.SHA384;
-		public static readonly Func<HMAC> HmacFactory = Mac.HMACFactories.HMACSHA384;
+		public static readonly Func<SHA512> HashFactory = Hash.HashFactories.SHA512;
+		public static readonly Func<HMAC> HmacFactory = Mac.HMACFactories.HMACSHA512;
 
 		public static byte[] Encrypt(byte[] masterKey, ArraySegment<byte> plaintext, ArraySegment<byte>? salt = null)
 		{
